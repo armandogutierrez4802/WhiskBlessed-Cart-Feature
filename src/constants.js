@@ -4,13 +4,40 @@ const popularItems = [
   'Vanilla Cake',
   'Chocolate Cake',
   'Lemon Cake',
+  'Funfetti Cake',
   'Lemon Bars',
   'Cheesecake Shooters',
   'Chocolate Covered Pretzels',
   'Fruit Tarts',
 ];
 
-const popularOptions = ['No Bake Cheesecake', 'Chocolate Mousse'];
+const popularOptions = ['No Bake Cheesecake'];
+
+const miniPiesAdditionalOptions = [
+  {
+    name: 'Flavor',
+    choices: [
+      {
+        title: 'Apple',
+        value: 'apple',
+        selected: false, 
+        extraCharge: 0,
+      },
+      {
+        title: 'Peach',
+        value: 'peach',
+        selected: false,
+        extraCharge: 0,
+      },
+      {
+        title: 'Banana Cream',
+        value: 'bananaCream',
+        selected: false,
+        extraCharge: 0,
+      },
+    ],
+  },
+];
 
 const cakeAdditionalOptions = [
   {
@@ -40,19 +67,31 @@ const cakeAdditionalOptions = [
         extraCharge: 0,
       },
       {
-        title: 'Chocolate Mousse',
-        value: 'chocolateMousse',
-        selected: false,
-        extraCharge: 0,
-      },
-      {
         title: 'Vanilla Mousse',
         value: 'vanillaMousse',
         selected: false,
         extraCharge: 0,
       },
       {
-        title: 'Fruit Compote',
+        title: 'Chocolate Mousse',
+        value: 'chocolateMousse',
+        selected: false,
+        extraCharge: 0,
+      },
+      {
+        title: 'Lemon Curd',
+        value: 'lemonCurd',
+        selected: false,
+        extraCharge: 0,
+      },
+      {
+        title: 'Cream Cheese',
+        value: 'creamCheese',
+        selected: false,
+        extraCharge: 0,
+      },
+      {
+        title: 'Fruit Compote (price varies)',
         value: 'fruitCompote',
         selected: false,
         extraCharge: 0,
@@ -75,7 +114,7 @@ const cheeseCakeAdditionalOptions = [
         title: 'Ganache',
         value: 'ganache',
         selected: false,
-        extraCharge: 10,
+        extraCharge: 12,
       },
     ],
   },
@@ -109,14 +148,14 @@ const menu = [
         options: [],
       },
       {
-        title: 'Peach Pie',
+        title: 'Peach Pie (seasonal)',
         price: 1000,
         category: 'pie',
         id: 3,
         options: [],
       },
       {
-        title: 'Chocolate Snickers Pie',
+        title: 'Chocolate Cream Pie',
         price: 1000,
         category: 'pie',
         id: 4,
@@ -127,7 +166,7 @@ const menu = [
         price: 15,
         category: 'pie',
         id: 5,
-        options: [],
+        options: miniPiesAdditionalOptions,
       },
     ],
   },
@@ -156,14 +195,14 @@ const menu = [
         options: cakeAdditionalOptions,
       },
       {
-        title: 'Marble Cake',
+        title: 'Funfetti Cake',
         price: 65,
         category: 'cake',
         id: 9,
         options: cakeAdditionalOptions,
       },
       {
-        title: 'Funfetti Cake',
+        title: 'Marble Cake',
         price: 65,
         category: 'cake',
         id: 10,
@@ -176,20 +215,20 @@ const menu = [
         id: 11,
         options: cakeAdditionalOptions,
       },
-      {
-        title: 'Red Velvet Cake',
-        price: 65,
-        category: 'cake',
-        id: 12,
-        options: cakeAdditionalOptions,
-      },
-      {
-        title: 'Oreo Cake',
-        price: 65,
-        category: 'cake',
-        id: 13,
-        options: cakeAdditionalOptions,
-      },
+      // {
+      //   title: 'Red Velvet Cake',
+      //   price: 65,
+      //   category: 'cake',
+      //   id: 12,
+      //   options: cakeAdditionalOptions,
+      // },
+      // {
+      //   title: 'Oreo Cake',
+      //   price: 65,
+      //   category: 'cake',
+      //   id: 13,
+      //   options: cakeAdditionalOptions,
+      // },
       {
         title: 'Carrot Cake',
         price: 65,

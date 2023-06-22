@@ -77,7 +77,7 @@ const Cart = ({
         id=""
         rows="5"
       ></textarea>{' '}
-      <br />
+      {/* <br /> */}
       <br />
       <ul>
         <li>Cakes are 3 layers unless otherwise requested</li>

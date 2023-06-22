@@ -2,13 +2,13 @@
 // import emailjs from 'emailjs-com';
 
 // =========== Checkout Component ===========
-const Checkout = ({ updatePage, pickupTimes, paymentMethods }) => {
+const Checkout = ({ updatePage, pickupTimes, paymentMethods, cartItems, estimatedTotal}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     updatePage('confirmation');
     console.log(e.target);
     console.log('Form submitted!');
-  };
+  }; 
   return (
     <div className="Checkout container">
       <button
@@ -23,7 +23,15 @@ const Checkout = ({ updatePage, pickupTimes, paymentMethods }) => {
       <br />
       <h2>Checkout</h2>
       <form onSubmit={handleSubmit}>
+        <div>
+          < h3>Cart</h3>
+          <textarea name="cart" id="" cols="30" rows="10">
+            {JSON.stringify(cartItems)}
+          </textarea>
+          </div>
+
         <div className="personal-info">
+          <h3>Contact Info</h3>
           <input type="text" name="first" placeholder="First Name" /> <br />
           <input type="text" name="last" placeholder="Last Name" /> <br />
           <input type="text" name="email" placeholder="Email" /> <br />

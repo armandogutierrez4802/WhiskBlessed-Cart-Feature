@@ -73,7 +73,7 @@ const Cart = ({
       <textarea
         onChange={(e) => updateSpecialRequests(e.target.value)}
         defaultValue={`${specialRequests}`}
-        name=""
+        name="special-requests"
         id=""
         rows="5"
       ></textarea>{' '}

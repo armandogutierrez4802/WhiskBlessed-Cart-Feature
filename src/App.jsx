@@ -14,6 +14,7 @@ function App() {
   const [isItemAdded, setIsItemAdded] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [specialRequests, setSpecialRequests] = useState('');
+  const [estimatedTotal, setEstimatedTotal] = useState(0);
 
   const [page, setPage] = useState('start');
 
@@ -183,6 +184,8 @@ function App() {
         updatePage={updatePage}
         pickupTimes={pickupTimes}
         paymentMethods={paymentMethods}
+        cartItems={cartItems}
+        estimatedTotal={estimatedTotal}
       />
     );
   } else if (page === 'confirmation') {

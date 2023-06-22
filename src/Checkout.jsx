@@ -55,11 +55,16 @@ const Checkout = ({ updatePage, pickupTimes, paymentMethods }) => {
             ))}
           </select>
         </div>
+        {/* <input type="checkbox" /> */}
+        <label className="checkbox-label"> 
         <input type="checkbox" />
-        <label> I have read the Terms & Conditions on the home page</label>
+          {' '}
+          I have read the Terms & Conditions on the home page
+        </label>
         <br />
+        {/* <input type="checkbox" /> */}
+        <label className="checkbox-label">
         <input type="checkbox" />
-        <label>
           {' '}
           I understand that all orders are subject to Product availability and
           the availability of Personnel to perform the Services

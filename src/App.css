@@ -139,7 +139,7 @@ textarea {
   margin-bottom: 10px;
 }
 
-.Checkout input,
+.Checkout input[type="text"],
 .Checkout .pickup-info input,
 .Checkout .pickup-info select {
   margin-bottom: 10px;

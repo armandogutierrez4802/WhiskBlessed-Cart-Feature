@@ -79,9 +79,11 @@ const Cart = ({
       ></textarea>{' '}
       <br />
       <br />
-      {/* <br /> */}
-      <p>* Prices for fillings may vary</p>
-      <p>* Prices do NOT include added decor</p>
+      <ul>
+        <li>Cakes are 3 layers unless otherwise requested</li>
+        <li>Prices for fillings may vary</li>
+        <li>Prices do NOT include added decor</li>
+      </ul>
       <br />
       <button
         type="button"

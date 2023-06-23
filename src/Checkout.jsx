@@ -7,7 +7,7 @@ const Checkout = ({
   pickupTimes,
   paymentMethods,
   cartItems,
-  getTotal
+  getTotal,
 }) => {
   // Helper functions
 
@@ -16,7 +16,11 @@ const Checkout = ({
     for (let cartItem of cartItems) {
       cartString += `${cartItem.item.title} ($${cartItem.item.price})\n`;
       for (let option of cartItem.options) {
-        cartString += `- ${option.optionGroupName}: ${option.choice.title} ${option.choice.extraCharge !==0 ? `$(${option.choice.extraCharge})` : ``}\n`;
+        cartString += `- ${option.optionGroupName}: ${option.choice.title} ${
+          option.choice.extraCharge !== 0
+            ? `$(${option.choice.extraCharge})`
+            : ``
+        }\n`;
       }
       cartString += `Qty: ${cartItem.qty}\n`;
       cartString += `------------\n`;

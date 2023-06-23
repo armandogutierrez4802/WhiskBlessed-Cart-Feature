@@ -7,19 +7,20 @@ const Checkout = ({
   pickupTimes,
   paymentMethods,
   cartItems,
-  estimatedTotal,
+  getTotal
 }) => {
   // Helper functions
 
   const getCartString = () => {
     let cartString = ``;
     for (let cartItem of cartItems) {
-      cartString += `* ${cartItem.item.title}\n`;
+      cartString += `${cartItem.item.title}\n`;
       for (let option of cartItem.options) {
         cartString += `- ${option.optionGroupName}: ${option.choice.title}\n`;
       }
-      cartString += `\n`;
+      cartString += `------------\n`;
     }
+    cartString += `Estimated Total: $${getTotal()}`;
     return cartString;
   };
 
@@ -45,7 +46,7 @@ const Checkout = ({
       <form onSubmit={handleSubmit}>
         <div>
           <h3>Cart</h3>
-          <textarea name="cart" id="" cols="30" rows="10">
+          <textarea name="cart" id="" cols="30" rows="10" readonly="true">
             {/* {JSON.stringify(cartItems[0].options)} */}
             {getCartString()}
           </textarea>

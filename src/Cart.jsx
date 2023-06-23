@@ -4,18 +4,8 @@ const Cart = ({
   updateQty,
   specialRequests,
   updateSpecialRequests,
+  getTotal
 }) => {
-  // Helper Function
-  const getTotal = () => {
-    let total = 0;
-    for (let cartItem of cartItems) {
-      total += cartItem.item.price * cartItem.qty;
-      for (let option of cartItem.options) {
-        total += option.choice.extraCharge * cartItem.qty;
-      }
-    }
-    return total;
-  };
 
   return (
     <div className="Cart container">

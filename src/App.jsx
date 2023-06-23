@@ -139,6 +139,17 @@ function App() {
     }
   };
 
+  const getTotal = () => {
+    let total = 0;
+    for (let cartItem of cartItems) {
+      total += cartItem.item.price * cartItem.qty;
+      for (let option of cartItem.options) {
+        total += option.choice.extraCharge * cartItem.qty;
+      }
+    }
+    return total;
+  };
+
   //Code
   let formComponent;
   if (page === 'start') {
@@ -176,6 +187,7 @@ function App() {
         updateQty={updateQty}
         specialRequests={specialRequests}
         updateSpecialRequests={updateSpecialRequests}
+        getTotal={getTotal}
       />
     );
   } else if (page === 'checkout') {
@@ -186,6 +198,7 @@ function App() {
         paymentMethods={paymentMethods}
         cartItems={cartItems}
         estimatedTotal={estimatedTotal}
+        getTotal={getTotal}
       />
     );
   } else if (page === 'confirmation') {

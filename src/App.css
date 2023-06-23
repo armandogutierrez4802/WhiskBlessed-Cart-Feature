@@ -83,8 +83,8 @@ textarea {
 }
 
 #cart-items-length {
-  /* padding-top: 1px; */
-  /* padding-right: 1px; */
+  padding-top: 1px;
+  padding-right: 1px;
   margin-left: 5px;
   display: inline-block;
   border: 1px solid white;

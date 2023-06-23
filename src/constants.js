@@ -20,19 +20,16 @@ const miniPiesAdditionalOptions = [
       {
         title: 'Apple',
         value: 'apple',
-        selected: false, 
         extraCharge: 0,
       },
       {
         title: 'Peach',
         value: 'peach',
-        selected: false,
         extraCharge: 0,
       },
       {
         title: 'Banana Cream',
         value: 'bananaCream',
-        selected: false,
         extraCharge: 0,
       },
     ],
@@ -46,13 +43,11 @@ const cakeAdditionalOptions = [
       {
         title: '6 inch',
         value: 'sixInch',
-        selected: false, //Why was this true before??? Does it matter?
         extraCharge: 0,
       },
       {
         title: '8 inch',
         value: 'eightInch',
-        selected: false,
         extraCharge: 15,
       },
     ],
@@ -63,37 +58,31 @@ const cakeAdditionalOptions = [
       {
         title: 'No Bake Cheesecake',
         value: 'noBakeCheesecake',
-        selected: false,
         extraCharge: 0,
       },
       {
         title: 'Vanilla Mousse',
         value: 'vanillaMousse',
-        selected: false,
         extraCharge: 0,
       },
       {
         title: 'Chocolate Mousse',
         value: 'chocolateMousse',
-        selected: false,
         extraCharge: 0,
       },
       {
         title: 'Lemon Curd',
         value: 'lemonCurd',
-        selected: false,
         extraCharge: 0,
       },
       {
         title: 'Cream Cheese',
         value: 'creamCheese',
-        selected: false,
         extraCharge: 0,
       },
       {
         title: 'Fruit Compote (price varies)',
         value: 'fruitCompote',
-        selected: false,
         extraCharge: 0,
       },
     ],
@@ -107,7 +96,6 @@ const cheeseCakeAdditionalOptions = [
       {
         title: 'Fruit (price varies)',
         value: 'fruit',
-        selected: false, //Why was this true before??? Does it matter?
         extraCharge: 0,
       },
       {
@@ -127,35 +115,30 @@ const cookiesAdditialOptions = [
       {
         title: 'Chocolate Chip',
         value: 'chocolateChip',
-        selected: false,
         extraCharge: 0,
       },
       {
         title: 'White Chocolate Nut',
         value: 'whiteChocolateNut',
-        selected: false,
         extraCharge: 0,
       },
       {
         title: 'Peanut Butter',
         value: 'peanutButter',
-        selected: false,
         extraCharge: 0,
       },
       {
         title: 'Snickerdoodle',
         value: 'snickerdoodle',
-        selected: false,
         extraCharge: 0,
       },
       {
         title: 'Sugar',
         value: 'sugar',
-        selected: false,
         extraCharge: 0,
       },
-    ]
-  }
+    ],
+  },
 ];
 
 // Menu has categories... categories have items ... items have options

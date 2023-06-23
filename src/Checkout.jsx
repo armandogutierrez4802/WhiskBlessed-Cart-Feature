@@ -2,13 +2,33 @@
 // import emailjs from 'emailjs-com';
 
 // =========== Checkout Component ===========
-const Checkout = ({ updatePage, pickupTimes, paymentMethods, cartItems, estimatedTotal}) => {
+const Checkout = ({
+  updatePage,
+  pickupTimes,
+  paymentMethods,
+  cartItems,
+  estimatedTotal,
+}) => {
+  // Helper functions
+
+  const getCartString = () => {
+    let cartString = ``;
+    for (let cartItem of cartItems) {
+      cartString += `* ${cartItem.item.title}\n`;
+      for (let option of cartItem.options) {
+        cartString += `- ${option.optionGroupName}: ${option.choice.title}\n`;
+      }
+      cartString += `\n`;
+    }
+    return cartString;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     updatePage('confirmation');
     console.log(e.target);
     console.log('Form submitted!');
-  }; 
+  };
   return (
     <div className="Checkout container">
       <button
@@ -24,11 +44,12 @@ const Checkout = ({ updatePage, pickupTimes, paymentMethods, cartItems, estimate
       <h2>Checkout</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          < h3>Cart</h3>
+          <h3>Cart</h3>
           <textarea name="cart" id="" cols="30" rows="10">
-            {JSON.stringify(cartItems)}
+            {/* {JSON.stringify(cartItems[0].options)} */}
+            {getCartString()}
           </textarea>
-          </div>
+        </div>
 
         <div className="personal-info">
           <h3>Contact Info</h3>
@@ -64,18 +85,16 @@ const Checkout = ({ updatePage, pickupTimes, paymentMethods, cartItems, estimate
           </select>
         </div>
         {/* <input type="checkbox" /> */}
-        <label className="checkbox-label"> 
-        <input type="checkbox" />
-          {' '}
-          I have read the Terms & Conditions on the home page
+        <label className="checkbox-label">
+          <input type="checkbox" /> I have read the Terms & Conditions on the
+          home page
         </label>
         <br />
         {/* <input type="checkbox" /> */}
         <label className="checkbox-label">
-        <input type="checkbox" />
-          {' '}
-          I understand that all orders are subject to Product availability and
-          the availability of Personnel to perform the Services
+          <input type="checkbox" /> I understand that all orders are subject to
+          Product availability and the availability of Personnel to perform the
+          Services
         </label>
         <br />
         <br />
